@@ -1,0 +1,12 @@
+<div class='container text-center'>
+  <%= simple_form_for(:user, url: user_session_path, html: { class: 'form-signin' }) do |f| %>
+    <h1 class='h3 mb-3 font-weight-normal'>Please sign up</h1>
+
+    <%= f.input :email, input_html: { class: 'form-control' }, placeholder: 'Email address', label: false %>
+    <%= f.input :password, input_html: { id: 'inputPassword', class: 'form-control' }, placeholder: 'Password', hint: false, error_html: { id: 'password_error'}, label: false %>
+    <%= f.input :remember_me, as: :boolean, label: 'Remember me', inline_label: true %>
+    <%= f.submit 'Sign in', class: 'btn btn-lg btn-primary btn-block'%>
+    
+    <p class='mt-5 mb-3 text-muted'>&copy; 2017-2018</p>
+  <% end %>
+</div>
